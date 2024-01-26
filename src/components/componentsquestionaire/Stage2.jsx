@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { MyContext } from "../../context";
+
 const Stage2 = () => {
+  const context = useContext(MyContext);
   return (
     <div className="medcond">
                 <h4>Do you have any existing medical conditions?</h4>
-                <input type="text" id="medicalconditions" placeholder="Diabetes, Skill issue" />
+                <input type="text" id="medicalconditions" placeholder="Diabetes, Skill issue" onChange={(e)=>context.setMediConditions(e.target.value)} />
     </div>
   )
 }

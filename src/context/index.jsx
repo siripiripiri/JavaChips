@@ -1,5 +1,6 @@
-
-import { createContext, useState } from "react";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore"; 
+import { createContext, useEffect, useState } from "react";
+import { db } from "../config/firebase";
 
 const MyContext = createContext({showModal:()=>{}});
 const MyProvider = (props) => {
@@ -14,13 +15,41 @@ const MyProvider = (props) => {
     const [mediHistory, setMediHistory] = useState("");
     const [psychologicalCond, setPsychologicalCond] = useState("");
 
-    console.log(gender);
+    const userCollectionRef = collection(db,"Users");
 
+    const submitQuestionaire = async () => {
+        console.log("Hi")
+        try{
+        await addDoc(userCollectionRef,{
+            name:username,
+            age:age,
+            allergies:allergies,
+            gender:gender,
+            height:height,
+            medical_conditions:mediConditions,
+            medical_history:mediHistory,
+            psychological:psychologicalCond,
+            uid:uid,
+            weight:weight,
 
+        })}
+        catch (err) {
+            console.error(err)
+        }
+    }
     
     return(
         <MyContext.Provider value={{
-            setGender: ()=> setGender("Male"),
+            setGender:setGender,
+            setUid:setUid,
+            setAge:setAge,
+            setAllergies,setAllergies,
+            setHeight:setHeight,
+            setWeight:setWeight,
+            setMediConditions:setMediConditions,
+            setMediHistory:setMediHistory,
+            setPsychologicalCond:setPsychologicalCond,
+            submitQuestionaire:submitQuestionaire,
         }}>
             {props.children}
         </MyContext.Provider>
