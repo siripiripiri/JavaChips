@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import Profile from "./components/Profile";
+import SignUpForm from "./components/SignUpForm";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <Routes>
         <Route path="login" element={<LoginForm/>} /> 
+        <Route path="signup" element={<SignUpForm/>} />
         <Route path="profile" element={<Profile/>} />
         <Route path="*" element={
           <>
