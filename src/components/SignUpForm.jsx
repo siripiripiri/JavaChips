@@ -7,17 +7,21 @@ import { useNavigate } from "react-router-dom";
 import Signupimage from "../images/Eating healthy food-cuate.png"
 
 const LoginForm = () => {
-
+  const context = useContext(MyContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  console.log(auth?.currentUser?.email)
+  console.log("Logged in as: " + auth?.currentUser?.email)
 
   const signIn = async () => {
     try {
       await createUserWithEmailAndPassword(auth,email,password);
     } catch (err) {
       console.error(err);
+    }
+    if (auth) {
+      context.setUid(auth.uid);
+      navigate('/questionaire')
     }
 }
 
@@ -26,6 +30,11 @@ const LoginForm = () => {
       await signInWithPopup(auth,googleProvider)
     } catch (err) {
       console.error(err)
+    }
+    context.setUsername(auth?.currentUser?.displayName)
+    if (auth) {
+      context.setUid(auth.uid);
+      navigate('/questionaire')
     }
   }
 

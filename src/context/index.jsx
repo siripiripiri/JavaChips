@@ -17,8 +17,9 @@ const MyProvider = (props) => {
 
     const userCollectionRef = collection(db,"Users");
 
+
     const submitQuestionaire = async () => {
-        console.log("Hi")
+        console.log(uid)
         try{
         await addDoc(userCollectionRef,{
             name:username,
@@ -40,6 +41,7 @@ const MyProvider = (props) => {
     
     return(
         <MyContext.Provider value={{
+            setUsername:setUsername,
             setGender:setGender,
             setUid:setUid,
             setAge:setAge,
