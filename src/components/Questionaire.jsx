@@ -10,7 +10,7 @@ import Stage5 from "./componentsquestionaire/Stage5";
 const Questionaire = () => {
     const context = useContext(MyContext);
     
-    const [stage, setStage] = useState(3);
+    const [stage, setStage] = useState(1);
   return (
     <>
         <div>
