@@ -1,9 +1,15 @@
+import { useContext } from "react"
+import { MyContext } from "../../context"
+
 const Stage1 = () => {
+
+  const context = useContext(MyContext);
+
   return (
     <div className="basicinfo">
             <div className='gender'>
                 <h4>What is your Gender</h4>
-                <button id="male">Male</button>
+                <button id="male" onClick={()=>context.setGender}>Male</button>
                 <button id="female">Female</button>
             </div>
             <div className="age">
