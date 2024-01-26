@@ -1,10 +1,10 @@
-
-import { signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { useContext, useState } from "react";
+import { MyContext } from "../context";
+import { createUserWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { googleProvider } from "../config/firebase";
-import { useState } from "react";
 
-const SignUpForm = () => {
+const LoginForm = () => {
 
 
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const SignUpForm = () => {
 
   const signIn = async () => {
     try {
-      await signInWithEmailAndPassword(auth,email,password);
+      await createUserWithEmailAndPassword(auth,email,password);
     } catch (err) {
       console.error(err);
     }
@@ -52,4 +52,5 @@ const SignUpForm = () => {
 }
 
 
-export default SignUpForm
+export default LoginForm
+
