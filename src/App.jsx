@@ -7,11 +7,6 @@ import Questionaire from "./components/Questionaire";
 function App() {
   return (
     <BrowserRouter>
-      <header>
-        <Link to="login">Login</Link>
-        <Link to="profile">Profile</Link>
-        <Link to="questionaire">Questionaire</Link>
-      </header>
       <Routes>
         <Route path="login" element={<LoginForm />} />
         <Route path="signup" element={<SignUpForm/>} />
