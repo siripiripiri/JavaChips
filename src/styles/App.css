@@ -8,6 +8,86 @@
     border-radius: 25px;
 }
 
+.profilepic{
+    border-radius: 100%;
+}
+
+.home{
+    background-color: #D6F6D0;
+    height: 100vh;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;    
+}
+
+#sidebar ul p {
+    color: #D6F6D0;
+    padding: 10px;
+}
+
+#sidebar ul li p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: grid;
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid #D6F6D0;
+    border-radius: 28px;
+    align-items: center;
+    font-size: 20px;
+}
+
+#sidebar ul li p:hover {
+    color: #000000;
+    background: #D6F6D0;
+    cursor: pointer;
+}
+
+.title{
+    font-family: "DM serif Display";
+    margin: 20px 0px 0px 20px;
+}
+
+.history{
+    font-family: "DM serif Display";
+    margin: 40px 0px 0px 40px;
+}
+
+.svgs{
+    margin: 10px 0px 0px 20px;
+}
+
+.sidebar-header{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#sidebar {
+    min-width: 400px;
+    max-width: 400px;
+    background: #2C2D2C;
+    color: #D6F6D0;
+    transition: all 0.3s;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+}
+
+#rightsidebar {
+    min-width: 400px;
+    max-width: 400px;
+    background: #2C2D2C;
+    color: #D6F6D0;
+    transition: all 0.3s;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    right: 0%;
+}
+
 .login{
     padding-left: 2.5rem; 
     padding-right: 2.5rem;
