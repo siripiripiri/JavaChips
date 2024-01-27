@@ -38,6 +38,7 @@ html,body{
     background-color: #D6F6D0;
     font-family: Sharp Grotesk;
     padding-bottom: 0;
+    max-height:4rem;
 }
 .title{
     justify-self: center;
