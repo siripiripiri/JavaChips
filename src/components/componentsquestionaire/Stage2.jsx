@@ -6,7 +6,7 @@ const Stage2 = () => {
   return (
     <div className="medcond">
                 <h4>Do you have any existing medical conditions?</h4>
-                <input type="text" id="medicalconditions" placeholder="Diabetes, Skill issue" onChange={(e)=>context.setMediConditions(e.target.value)} />
+                <input className="form-control" type="text" id="medicalconditions" placeholder="Diabetes, Skill issue" onChange={(e)=>context.setMediConditions(e.target.value)} />
     </div>
   )
 }

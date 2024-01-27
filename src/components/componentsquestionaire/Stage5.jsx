@@ -6,7 +6,7 @@ const Stage5 = () => {
   return (
     <div className="psycho">
                 <h4>Psychological Factors</h4>
-                <input type="text" id="psycho" placeholder="Anxiety, Depression, etc."  onChange={(e)=>context.setPsychologicalCond(e.target.value)}/>
+                <input className="form-control" type="text" id="psycho" placeholder="Anxiety, Depression, etc."  onChange={(e)=>context.setPsychologicalCond(e.target.value)}/>
     </div>
   )
 }
