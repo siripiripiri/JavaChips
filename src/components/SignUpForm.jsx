@@ -20,7 +20,7 @@ const LoginForm = () => {
       console.error(err);
     }
     if (auth) {
-      context.setUid(auth.uid);
+      context.setUid(auth?.currentUser?.uid);
       navigate('/questionaire')
     }
 }
@@ -33,7 +33,7 @@ const LoginForm = () => {
     }
     context.setUsername(auth?.currentUser?.displayName)
     if (auth) {
-      context.setUid(auth.uid);
+      context.setUid(auth?.currentUser?.uid);
       navigate('/questionaire')
     }
   }

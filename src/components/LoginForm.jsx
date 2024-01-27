@@ -2,11 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { googleProvider } from "../config/firebase";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Loginimage from "../images/Eating healthy food-pana.png"
+import { MyContext } from "../context";
 
 const SignUpForm = () => {
-
+  const context = useContext(MyContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +19,11 @@ const SignUpForm = () => {
     } catch (err) {
       console.error(err);
     }
+    if (auth) {
+      context.setUid(auth?.currentUser?.uid);
+      context.getUserData()
+      navigate('/profile')
+    }
 }
 
   const signInWithGoogle = async () => {
@@ -25,6 +31,12 @@ const SignUpForm = () => {
       await signInWithPopup(auth,googleProvider)
     } catch (err) {
       console.error(err)
+    }
+    if (auth) {
+      context.setUid(auth?.currentUser?.uid);
+      console.log(auth?.currentUser?.uid);
+      context.getUserData()
+      navigate('/home')
     }
   }
 

@@ -1,6 +1,6 @@
-import { addDoc, collection, doc, setDoc } from "firebase/firestore"; 
+import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore"; 
 import { createContext, useEffect, useState } from "react";
-import { db } from "../config/firebase";
+import { auth, db } from "../config/firebase";
 
 const MyContext = createContext({showModal:()=>{}});
 const MyProvider = (props) => {
@@ -15,13 +15,31 @@ const MyProvider = (props) => {
     const [mediHistory, setMediHistory] = useState("");
     const [psychologicalCond, setPsychologicalCond] = useState("");
 
-    const userCollectionRef = collection(db,"Users");
+    console.log(auth?.currentUser?.uid)
+
+
+    
+    const getUserData = async () => {
+        
+        console.log("UID" + uid)
+        const docRef = doc(db,"Users", uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            const data = docSnap.data()
+            console.log(data)
+          } else {
+            // docSnap.data() will be undefined in this case
+            console.log("No such document!");
+          }
+    }
+
+
 
 
     const submitQuestionaire = async () => {
         console.log(uid)
         try{
-        await addDoc(userCollectionRef,{
+        await setDoc(doc(db, "Users", uid), {
             name:username,
             age:age,
             allergies:allergies,
@@ -52,6 +70,7 @@ const MyProvider = (props) => {
             setMediHistory:setMediHistory,
             setPsychologicalCond:setPsychologicalCond,
             submitQuestionaire:submitQuestionaire,
+            getUserData:getUserData,
         }}>
             {props.children}
         </MyContext.Provider>
