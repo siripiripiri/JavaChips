@@ -45,7 +45,7 @@ const Questionaire = () => {
                     stage === 5 ? null : <button className="btn btn-lg login" onClick={()=>setStage(stage+1)}>Next</button>
                   }
                   {
-                    stage === 5 ? <button className="btn btn-lg login" onClick={()=>context.submitQuestionaire()}>Submit</button> : null
+                    stage === 5 ? <button className="btn btn-lg login" onClick={()=>{context.submitQuestionaire(); navigate("/home")}}>Submit</button> : null
                   }
                 </div>
               </div>
