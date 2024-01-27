@@ -11,6 +11,7 @@ const Profile = () => {
                         <div>
                             <h5>Mahendra Singh Dhoni</h5>
                             <h6>Thala for a reason</h6>
+                            {/* name, email, gender, age, weight, height, medical condition, allergies, falily medical history, psychology */}
                         </div>
                     </div>
                 </div>
