@@ -1,4 +1,5 @@
 import { useContext, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { MyContext } from "../context"
 import Stage1 from "./componentsquestionaire/Stage1";
 import Stage2 from "./componentsquestionaire/Stage2";
@@ -9,7 +10,7 @@ import Questionaireimage from "../images/Thinking face-cuate.png"
 
 const Questionaire = () => {
     const context = useContext(MyContext);
-    
+    const navigate = useNavigate()
     const [stage, setStage] = useState(1);
   return (
         <section className="vh-100">
