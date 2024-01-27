@@ -32,6 +32,16 @@
     color: #828C7A;
     font-size: 40px;
     line-height: 0px;
+    padding-bottom: 10px;
+}
+
+.diagnosis{
+    width: 25%;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #2D2E2D;
+    color: #D6F6D0;
+    border: 2px solid #5C4848 !important; 
 }
 
 .profilepic{
@@ -42,6 +52,7 @@
 .home{
     background-color: #D6F6D0;
     height: 100vh;
+    overflow: auto;
 }
 
 #sidebar ul.components {

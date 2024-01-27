@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
     const navigate = useNavigate(); 
+    const [inputList, setInputList] = useState(['']);
+
+    const addInput = () => {
+        setInputList([...inputList, ''])
+      };
+
+    const handleInputChange = (index, value) => {
+    const newList = [...inputList];
+    newList[index] = value;
+    setInputList(newList);
+    };
   return (
         <div className='home'>
             <nav id='sidebar'>
@@ -39,12 +50,18 @@ const HomePage = () => {
                     <h1 className='catchphrase'>Not feeling your best? Let's help.</h1>
                     <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
                     <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
-                    <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
-                    <button className='add'>+</button><br />
-                    <button>Start Diagnosis</button>
+                    {inputList.map((input, index) => (
+                        <div key={index}>
+                        <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
+                        </div>
+                    ))}
+                    <button className='add' onClick={addInput}>+</button><br />
+                    <button className='diagnosis'>Start Diagnosis   <svg  className="up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23" fill="none">
+<path d="M1.9901 21.0304L21.0275 1.99298M21.0275 1.99298L21.0275 19.9727M21.0275 1.99298L3.04773 1.99298" stroke="#D6F6D0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
                 </div>
                 <div className='output'>
-                    
+
                 </div>
             </div>
         </div>
