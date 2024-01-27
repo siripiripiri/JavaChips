@@ -103,7 +103,11 @@
     cursor: pointer;
 }
 
-.title{
+.tips{
+    height: 33%;
+}
+
+.titleh{
     font-family: "DM serif Display";
     margin: 20px 0px 0px 20px;
 }
