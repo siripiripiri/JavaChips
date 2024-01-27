@@ -32,7 +32,7 @@ const LandingPage = () => {
 </clipPath>
 </defs>
 </svg>
-<svg onClick={()=> navigate('/login')} className='arrow-link' width="259" height="259" viewBox="0 0 259 259" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg onClick={()=> navigate('/signup')} className='arrow-link' width="259" height="259" viewBox="0 0 259 259" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M253 129.5C253 197.707 197.707 253 129.5 253C61.2928 253 6 197.707 6 129.5C6 61.2928 61.2928 6 129.5 6C197.707 6 253 61.2928 253 129.5Z" fill="#637460"/>
         <path d="M178.31 151.212V85.0848L144.735 118.835C156.994 106.511 178.035 115.101 178.168 132.482L178.31 151.212Z" fill="#D6F6D0"/>
         <path d="M178.31 85.0848H112.183L130.803 85.1522C148.341 85.2157 157.104 106.401 144.735 118.835L178.31 85.0848Z" fill="#D6F6D0"/>
