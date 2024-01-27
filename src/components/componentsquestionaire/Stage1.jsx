@@ -11,6 +11,7 @@ const Stage1 = () => {
                 <h4>What is your Gender</h4>
                 <button id="male" onClick={()=>context.setGender("Male")}>Male</button>
                 <button id="female" onClick={()=>context.setGender("Female")}>Female</button>
+                <input type="text" placeholder="Other" onChange={(e)=>context.setGender(e.target.value)}/>
             </div>
             <div className="age">
                 <h4>How old are you?</h4>
