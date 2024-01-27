@@ -103,6 +103,10 @@
     cursor: pointer;
 }
 
+.other{
+    width: 30% !important;
+}
+
 .tips{
     height: 33%;
 }

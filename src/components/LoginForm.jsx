@@ -22,7 +22,7 @@ const SignUpForm = () => {
     if (auth) {
       context.setUid(auth?.currentUser?.uid);
       context.getUserData()
-      navigate('/profile')
+      navigate('/home')
     }
 }
 
