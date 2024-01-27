@@ -1,11 +1,12 @@
-import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import LoginForm from "./components/LoginForm";
-import Profile from "./components/Profile";
-import SignUpForm from "./components/SignUpForm";
-import Questionaire from "./components/Questionaire";
-import HomePage from "./components/HomePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./components/About";
+import HomePage from "./components/HomePage";
+import LandingPage from "./components/LandingPage";
+import LoginForm from "./components/LoginForm";
 import Map from "./components/Map";
+import Profile from "./components/Profile";
+import Questionaire from "./components/Questionaire";
+import SignUpForm from "./components/SignUpForm";
 
 function App() {
   return (
