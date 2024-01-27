@@ -8,8 +8,35 @@
     border-radius: 25px;
 }
 
+.catchphrase{
+    font-family: "DM Serif Display";
+    padding-top: 20%;
+    margin-bottom: 30px;
+}
+
+.symptom{
+    width: 40% !important;
+    margin: 10px auto 10px auto;
+    height: 48px;
+    background-color: #D6F6D0 !important;
+    border: 2px solid #828C7A !important; 
+}
+
+.add{
+    background-color: #D6F6D0 !important;
+    border: 2px solid #828C7A !important; 
+    width: 44px;
+    height: 44px;
+    border-radius: 5px;
+    margin-left: 260px;
+    color: #828C7A;
+    font-size: 40px;
+    line-height: 0px;
+}
+
 .profilepic{
     border-radius: 100%;
+    margin: 36px 0px 0px 120px;
 }
 
 .home{
@@ -28,7 +55,6 @@
 
 #sidebar ul li p {
     padding: 10px;
-    font-size: 1.1em;
     display: grid;
     width: 80%;
     height: 80px;
@@ -38,6 +64,26 @@
     border-radius: 28px;
     align-items: center;
     font-size: 20px;
+}
+
+.userne{
+    display: grid;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    border-radius: 28px;
+    font-size: 20px;
+    background-color: #2C2D2C;  
+    border: 3px solid #5C4848;
+}
+
+#name{
+    color: #ffffff;
+}
+
+#email{
+    color: #D6F6D0;
 }
 
 #sidebar ul li p:hover {
@@ -56,6 +102,10 @@
     margin: 40px 0px 0px 40px;
 }
 
+.histori{
+    height: 65%;
+}
+
 .svgs{
     margin: 10px 0px 0px 20px;
 }
@@ -65,9 +115,15 @@
     margin-bottom: 40px;
 }
 
+.main{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
 #sidebar {
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 25%;
+    max-width: 25%;
     background: #2C2D2C;
     color: #D6F6D0;
     transition: all 0.3s;
