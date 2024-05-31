@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-=======
 import  { useState } from 'react'
 import  { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MyContext } from '../context';
 import { auth } from '../config/firebase';
 
->>>>>>> f147da54cc0950e90c0d4059c7c084bf93dd9f7f
 
 const HomePage = () => {
     const context = useContext(MyContext);
