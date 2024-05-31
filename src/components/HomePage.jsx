@@ -1,14 +1,56 @@
+
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import  { useState } from 'react'
 import  { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MyContext } from '../context';
 import { auth } from '../config/firebase';
+import { MyContext } from '../context';
 
 
 const HomePage = () => {
     const context = useContext(MyContext);
     const navigate = useNavigate(); 
     const [inputList, setInputList] = useState(['']);
+    const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/data');
+      const jsonData = await response.json();
+      console.log('Response:', jsonData);
+      setData(jsonData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const formData = new FormData(e.target);
+      const response = await fetch('http://localhost:5000/submit_symptoms', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        console.log('Symptoms submitted successfully');
+        // Optionally, you can fetch data again after submission
+        fetchData();
+      } else {
+        console.error('Failed to submit symptoms');
+      }
+    } catch (error) {
+      console.error('Error submitting symptoms:', error);
+    }
+  };
 
     const addInput = () => {
         setInputList([...inputList, ''])
@@ -59,20 +101,26 @@ const HomePage = () => {
             <div className='main'>
                 <div className='input'>
                     <h1 className='catchphrase'>Not feeling your best? Let's help.</h1>
-                    <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
-                    <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
-                    {inputList.map((input, index) => (
-                        <div key={index}>
-                        <input type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
-                        </div>
-                    ))}
-                    <button className='add' onClick={addInput}>+</button><br />
-                    <button className='diagnosis'>Start Diagnosis   <svg  className="up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23" fill="none">
-<path d="M1.9901 21.0304L21.0275 1.99298M21.0275 1.99298L21.0275 19.9727M21.0275 1.99298L3.04773 1.99298" stroke="#D6F6D0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></button>
+                    <form onSubmit={handleSubmit}>
+                        <input name = 'sym1' type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
+                        <input name = 'sym2' type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
+                        {inputList.map((input, index) => (
+                            <div key={index}>
+                            <input name='sym3' type='text' placeholder='Add your Symptom...' className='form-control form-control-md symptom' />
+                            </div>
+                        ))}
+                        <button className='add' onClick={addInput}>+</button><br />
+                        <button type='submit' className='diagnosis'>Start Diagnosis   <svg  className="up" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23" fill="none">
+                            <path d="M1.9901 21.0304L21.0275 1.99298M21.0275 1.99298L21.0275 19.9727M21.0275 1.99298L3.04773 1.99298" stroke="#D6F6D0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
                 <div className='output'>
-
+                    <div className='container'>
+                    <p className='text'>{data.Message}</p>
+                    </div>
+                
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@ import Map from "./components/Map";
 import Profile from "./components/Profile";
 import Questionaire from "./components/Questionaire";
 import SignUpForm from "./components/SignUpForm";
+import YourComponent from "./components/YourComponent";
 
 function App() {
   return (
@@ -21,8 +22,10 @@ function App() {
         <Route path="map" element={<Map/>} />
         <Route path="/" element={<LandingPage/>} />
         <Route path="*" element={<>
-          <h1>404</h1>
+          <h1>404, Page Not Found</h1>
         </>} />
+        <Route path ="yourcomponent/" element ={<YourComponent />}
+        />
       </Routes>
     </BrowserRouter>
   )
