@@ -101,6 +101,7 @@
     color: #000000;
     background: #D6F6D0;
     cursor: pointer;
+    transition: ease-in-out 0.5s;
 }
 
 .other{
@@ -114,6 +115,7 @@
 .titleh{
     font-family: "DM serif Display";
     margin: 20px 0px 0px 20px;
+    font-size: 2rem;
 }
 
 .history{
@@ -191,6 +193,24 @@ height: calc(100% - 73px);
     text-align: center;
     position: absolute;
     top: 2%;
+}
+
+
+.text{
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    width:100%;
+    overflow: hidden;
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes typing{
+    from {width:0}
 }
 
 @media (max-width: 450px) {
