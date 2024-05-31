@@ -63,7 +63,7 @@ const MyProvider = (props) => {
             setGender:setGender,
             setUid:setUid,
             setAge:setAge,
-            setAllergies,setAllergies,
+            setAllergies:setAllergies,
             setHeight:setHeight,
             setWeight:setWeight,
             setMediConditions:setMediConditions,
