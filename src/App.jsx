@@ -6,6 +6,7 @@ import LoginForm from "./components/LoginForm";
 import Map from "./components/Map";
 import Profile from "./components/Profile";
 import Questionaire from "./components/Questionaire";
+import ResultPage from "./components/ResultPage";
 import SignUpForm from "./components/SignUpForm";
 import YourComponent from "./components/YourComponent";
 
@@ -21,10 +22,12 @@ function App() {
         <Route path="about" element={<About/>} />
         <Route path="map" element={<Map/>} />
         <Route path="/" element={<LandingPage/>} />
+        <Route path="result" element={<ResultPage/>} />
         <Route path="*" element={<>
           <h1>404, Page Not Found</h1>
         </>} />
         <Route path ="yourcomponent/" element ={<YourComponent />}
+        
         />
       </Routes>
     </BrowserRouter>

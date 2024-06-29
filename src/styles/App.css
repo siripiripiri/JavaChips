@@ -1,3 +1,12 @@
+:root{
+    background-color: #30302E;
+    font-family: "Copernicus Trial";
+}
+body{
+    background-color: #30302E !important;
+}
+
+
 .map-frame {
     height: 90vh;
     width: 50vw;
@@ -31,27 +40,39 @@
 }
 
 .catchphrase{
-    font-family: "DM Serif Display";
-    padding-top: 20%;
+    font-family: "Copernicus Trial";
+    padding-top: 10rem;
     margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .symptom{
     width: 40% !important;
     margin: 10px auto 10px auto;
     height: 48px;
-    background-color: #D6F6D0 !important;
-    border: 2px solid #828C7A !important; 
+    color: #EEEDE3 !important;
+    background-color: #30302E !important;
+    border: 1px solid #EEEDE3 !important; 
+}
+
+input{
+    color: #eeede3;
+}
+
+::placeholder{
+    color: #EEEDE3 !important;
 }
 
 .add{
-    background-color: #D6F6D0 !important;
-    border: 2px solid #828C7A !important; 
+    background-color: #30302E !important;
+    border: 2px solid #EEEDE3 !important; 
     width: 44px;
     height: 44px;
     border-radius: 5px;
     margin-left: 260px;
-    color: #828C7A;
+    color: #EEEDE3;
     font-size: 40px;
     line-height: 0px;
     padding-bottom: 10px;
@@ -60,29 +81,33 @@
 .diagnosis{
     width: 25%;
     height: 48px;
-    border-radius: 5px;
-    background-color: #2D2E2D;
+    border-radius: 1rem;
+    background-color: #3e3e3e;
     color: #D6F6D0;
-    border: 2px solid #5C4848 !important; 
+    font-size: 0.8rem;
 }
 
 .profilepic{
     border-radius: 100%;
-    margin: 36px 0px 0px 120px;
+    margin: 1.8rem 0px 0px 7rem;
 }
 
 .home{
-    background-color: #D6F6D0;
-    height: 100vh;
+    background-color: #30302E;
+    color: #EEEDE3;
+    font-family: "Copernicus Trial";
+    height: auto;
     overflow: auto;
 }
 
 #sidebar ul.components {
-    padding: 20px 0;    
+    padding: 20px 0;
+    font-family: "Copernicus Trial";
+    font-size: 0.9rem;
 }
 
 #sidebar ul p {
-    color: #D6F6D0;
+    color: #EEEDE3;
     padding: 10px;
 }
 
@@ -93,22 +118,22 @@
     height: 80px;
     margin: auto;
     margin-bottom: 20px;
-    border: 2px solid #D6F6D0;
+    border: 1px solid #EEEDE3;
     border-radius: 28px;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.1rem;
 }
 
 .userne{
-    display: grid;
-    align-items: center;
-    width: 80%;
-    height: 80px;
-    margin: auto;
+    width: 16rem;
+    height: 5rem;
     border-radius: 28px;
-    font-size: 20px;
-    background-color: #2C2D2C;  
-    border: 3px solid #5C4848;
+    font-size: 1.5rem;
+    background-color: #2C2D2C; 
+    border: 3px solid #afafaf;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+
 }
 
 #name{
@@ -131,33 +156,37 @@
 }
 
 .tips{
-    height: 33%;
+    padding-top: 11rem;
 }
 
 .titleh{
-    font-family: "DM serif Display";
+    font-family: "Copernicus Trial";
     margin: 20px 0px 0px 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+    line-height: 2.5;
 }
 
 .header-text {
-    font-family: "DM serif Display";
+    font-family: "Copernicus Trial";
     font-size: 3rem;
     text-align: center;
     color: #D6F6D0;
 }
 
 .history{
-    font-family: "DM serif Display";
-    margin: 40px 0px 0px 40px;
+    font-family: "Copernicus Trial";
+    font-size: 1.5rem;
+    margin: 2rem 0px 0px 2rem;
+
 }
 
 .histori{
-    height: 65%;
+    height: 0%;
 }
 
 .svgs{
-    margin: 10px 0px 0px 20px;
+    margin: 20px -5px 0px 20px;
 }
 
 .sidebar-header{
@@ -177,8 +206,8 @@
 }
 
 #sidebar {
-    min-width: 25%;
-    max-width: 25%;
+    min-width: 20rem;
+    max-width: 20rem;
     background: #2C2D2C;
     color: #D6F6D0;
     transition: all 0.3s;
@@ -188,8 +217,8 @@
 }
 
 #rightsidebar {
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 20rem;
+    max-width: 20rem;
     background: #2C2D2C;
     color: #D6F6D0;
     transition: all 0.3s;
@@ -232,7 +261,7 @@ height: calc(100% - 73px);
 
 .text{
     font-size: 1.2rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-family: "Copernicus Trial";
     width:100%;
     overflow: hidden;
 }
@@ -261,4 +290,67 @@ height: 100%;
     .svg{
         display: none;
     }
+}
+
+.result-title{
+    color: #EEEDE3;
+    font-family: "Copernius Trial";
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.results-container{
+    margin-left: 21.5rem;
+    margin-right: 21.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    height: fit-content;
+    width: 45rem;
+    border: 1px solid #EEEDE3;
+    border-radius: 1.5rem;
+}
+
+.diagnosis-title{
+    font-size: 1.5rem;
+    font-family: "Copernius Trial";
+    font-weight: 500;
+    color: #EEEDE3;
+}
+
+.remedies-title{
+    font-size: 1.5rem;
+    font-family: "Copernius Trial";
+    font-weight: 500;
+    color: #EEEDE3;
+}
+.remedies-container{
+    margin-top: 1rem;
+}
+
+.remedies-text, .diagnosis-text{
+    font-size: 1rem;
+    color: #cdcdbc;
+    font-family: "Copernicus Trial";
+}
+
+.result-page__container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    /* width: calc(100vw - 40rem);
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin-left: 21.5rem;
+    height: fit-content; */
+
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+.result-page{
+    height: 400rem;
+    overflow: scroll;
 }
