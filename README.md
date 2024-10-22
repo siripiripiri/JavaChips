@@ -1,4 +1,6 @@
 # An Apple A Day
+<img width="1401" alt="Screenshot 2024-10-22 at 8 11 56 AM" src="https://github.com/user-attachments/assets/6f5decca-93c9-4dcf-a8b3-7dd1c33a9103">
+
 
 ## Overview
 
@@ -11,6 +13,15 @@ To address this problem, we developed a web application that utilizes AI to anal
 - Possible causes of the symptoms
 - Suggested courses of action
 - Recommendations on whether immediate medical attention is needed
+
+
+# Demo
+## Add Symptoms
+<img width="1430" alt="Screenshot 2024-10-22 at 8 10 33 AM" src="https://github.com/user-attachments/assets/902807ba-1601-4aad-8674-e693c1ad0d4f">
+
+## Diagnosis & Remedies
+<img width="1426" alt="Screenshot 2024-10-22 at 8 10 49 AM" src="https://github.com/user-attachments/assets/78faa3c4-3844-47d6-8aef-32fb585fbbfe">
+
 
 ## Key Features
 
@@ -25,4 +36,4 @@ To address this problem, we developed a web application that utilizes AI to anal
 - **React 18**: For building the user interface.
 - **Firebase**: For authentication and database storage.
 - **Bootstrap**: For responsive and sleek UI design.
-- **Gemma LLM**: For advanced natural language processing and AI-driven health assessments.
+- **LLAMA-2 LLM**: For advanced natural language processing and AI-driven health assessments.
